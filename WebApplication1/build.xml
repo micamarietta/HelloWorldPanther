@@ -1,0 +1,16 @@
+ <?xml version="1.0"?>
+    <project name="WebApplication1" default="build" basedir=".">
+        <description>Mica and Jessie Project</description>
+        <property name="debug" value="true" overwrite="false" />
+        <target name="clean" description="remove all generated files">
+            <delete file="WebApplication1.exe" failonerror="false" />
+            <delete file="WebApplication1.pdb" failonerror="false" />
+        </target>
+        <target name="build" description="compiles the source code">
+            <csc target="exe" output="WebApplication1.exe" debug="${debug}">
+                <sources>
+                    <includes name="Program.cs" />
+                </sources>
+            </csc>
+        </target>
+    </project>
